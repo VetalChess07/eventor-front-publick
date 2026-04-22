@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  vite-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+        VITE_HOST: ${VITE_HOST}
+        VITE_TG_BOT_NAME: ${VITE_TG_BOT_NAME}
+    environment:
+      VITE_API_URL: ${VITE_API_URL}
+      VITE_HOST: ${VITE_HOST}
+      VITE_TG_BOT_NAME: ${VITE_TG_BOT_NAME}
+    ports:
+      - "5278:5278"
+    command: npm run preview:prod -- --host 0.0.0.0 --port 5278
