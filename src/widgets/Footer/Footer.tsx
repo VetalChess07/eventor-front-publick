@@ -43,49 +43,6 @@ export const Footer = memo(() => {
           Все права защищены
         </Typography>
       </Box>
-
-      <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          gap: '12px',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          color: 'var(--color-text-footer)',
-        }}
-      >
-        <MuiLink
-          component={Link}
-          to="https://donatov.net/privacy"
-          sx={{
-            color: 'var(--color-text-footer)',
-            fontSize: '0.875rem',
-            textDecoration: 'none',
-            '&:hover': {
-              textDecoration: 'underline',
-              color: '#4875b9',
-            },
-          }}
-        >
-          Политика конфиденциальности
-        </MuiLink>
-        <MuiLink
-          component={Link}
-          to="https://donatov.net/eula"
-          sx={{
-            color: 'var(--color-text-footer)',
-            fontSize: '0.875rem',
-            textDecoration: 'none',
-            '&:hover': {
-              textDecoration: 'underline',
-              color: '#4875b9',
-            },
-          }}
-        >
-          Обработка персональных данных
-        </MuiLink>
-      </Box>
     </Box>
   );
 });
